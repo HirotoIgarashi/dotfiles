@@ -1,4 +1,5 @@
-# Node.jsとnpmのアンインストール
+# Node実行環境の準備
+## Node.jsとnpmのアンインストール
 
 ```
 $ sudo npm uninstall npm
@@ -6,7 +7,7 @@ $ cd ${Node.jsのソースコードを展開したディレクトリ}
 $ sudo make uninstall0
 ```
 
-# naveのインストール
+## naveのインストール
 ```
 $ sudo apt-get install build-essential libssl-dev git-core
 $ sudo apt-get install curl
