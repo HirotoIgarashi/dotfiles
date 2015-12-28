@@ -85,6 +85,9 @@ set autoindent    "改行時に前の行のインデントを継続する
 set smartindent   "改行時に入力された行の末尾に合わせて次の行のインデントを増減
 
 set number        "行番号を表示"
-set list          "タブなどの特殊文字を表示"
+" set list          "タブなどの特殊文字を表示"
 set cursorline    "カーソルがある行に特別な色付けなど"
 au BufRead,BufNewFile *.md set filetype=markdown
+
+vmap <silent> ;h :s?^\(\s*\)+ '\([^']\+\)',*\s*$?\1\2?g<CR>
+vmap <silent> ;q :s?^\(\s*\)\(.*\)s*$? \1 + '\2'?g<CR>
