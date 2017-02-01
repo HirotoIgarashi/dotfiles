@@ -117,3 +117,4 @@ if ! shopt -oq posix; then
 fi
 
 alias nave=$HOME/nodejs/nave/nave.sh
+export NODE_PATH=~/.nave/installed/7.2.0/lib/node_modules

@@ -68,6 +68,9 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
+" Pythonの環境
+" NeoBundle 'klen/python-mode'
+
 " vimrcに記述されたプラグインでインストールされていないものがないかチェックする。
 NeoBundleCheck
 call neobundle#end()
@@ -91,3 +94,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 
 vmap <silent> ;h :s?^\(\s*\)+ '\([^']\+\)',*\s*$?\1\2?g<CR>
 vmap <silent> ;q :s?^\(\s*\)\(.*\)s*$? \1 + '\2'?g<CR>
+
+set foldmethod=syntax
+set foldlevel=100
