@@ -1,6 +1,7 @@
 " neobundl settings {{{
 if has('vim_starting')
-  set nocompatible
+  set nocompatible  " Be iMproved
+
   " neobundleをインストールしていない場合は自動インストール
   if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
     echo "install neobundle..."
@@ -16,6 +17,8 @@ let g:neobundle_default_git_protocao='https'
 " neobundle#begin - neobundle#endの間に導入するプラグインを記載します。
 
 
+" Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 " こんな感じが基本の書き方
 NeoBundle 'nanotech/jellybeans.vim'
