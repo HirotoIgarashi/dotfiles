@@ -71,6 +71,10 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
+" ファイルをtree表示してくれる
+" 起動は:NERDTree
+NeoBundle 'scrooloose/nerdtree'
+
 " Pythonの環境
 " NeoBundle 'klen/python-mode'
 
