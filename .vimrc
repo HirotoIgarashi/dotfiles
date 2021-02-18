@@ -1,25 +1,49 @@
+"NeoBundle Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/home/hiroto/.vim/bundle/neobundle.vim/
+
+" neobundle#begin - neobundle#endの間に導入するプラグインを記載します。
+" Required:
+call neobundle#begin(expand('/home/hiroto/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
 " neobundl settings {{{
 if has('vim_starting')
-  set nocompatible  " Be iMproved
-
   " neobundleをインストールしていない場合は自動インストール
   if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
     echo "install neobundle..."
     " vimからコマンド呼び出しているだけneobundleのクローン
     :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
   endif
-  " runtimepathの追加は必須
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#begin(expand('~/.vim/bundle'))
+
 let g:neobundle_default_git_protocao='https'
 
-" neobundle#begin - neobundle#endの間に導入するプラグインを記載します。
-
-
 " Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
 " こんな感じが基本の書き方
 NeoBundle 'nanotech/jellybeans.vim'
 
@@ -80,7 +104,12 @@ NeoBundle 'scrooloose/nerdtree'
 
 " vimrcに記述されたプラグインでインストールされていないものがないかチェックする。
 NeoBundleCheck
+
+" Required:
 call neobundle#end()
+
+"End NeoBundle Scripts-------------------------
+
 filetype plugin indent on
 " どうせだからjellybeansカラースキーマを使ってみましょう
 set t_Co=256
