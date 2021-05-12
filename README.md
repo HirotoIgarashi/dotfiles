@@ -2,6 +2,7 @@
 
 ## 使い方
 ```
+$ sudo apt install vim vim-runtime exuberant-ctags vim-doc vim-scripts
 $ cd
 $ ln -s ~/git/dotfiles/.vimrc .vimrc 
 $ ln -s ~/git/dotfiles/.bashrc .bashrc 
