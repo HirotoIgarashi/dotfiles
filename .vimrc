@@ -4,11 +4,11 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/hiroto/.vim/bundle/neobundle.vim/
+set runtimepath+=~/.vim/bundle/neobundle.vim/
 
 " neobundle#begin - neobundle#endの間に導入するプラグインを記載します。
 " Required:
-call neobundle#begin(expand('/home/hiroto/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
